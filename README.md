@@ -41,13 +41,14 @@ Best price for Wireless Mouse for Premium user: $40.00
 
 ## Testing
 
-The program was executed using the example product and premium customer scenario.
+The program was tested using several different scenarios to verify that the discount calculations work correctly.
 
-- Original price: $50.00
-- Premium discount: 20%
-- Final price: $40.00
+- **Premium customer:** Confirmed that the 20% premium discount is applied.
+- **Regular customer:** Confirmed that the premium discount is not applied.
+- **Different product price:** Tested the calculator with a $100 laptop.
+- **Non-applicable discount:** Confirmed that an 80% discount is rejected.
 
-The program produced the expected output.
+All test scenarios produced the expected results.
 
 ## What I Learned
 
