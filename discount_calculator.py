@@ -71,3 +71,19 @@ if __name__ == '__main__':
     best_price = engine.calculate_best_price(product, user_tier)
     print(f'Best price for {product.name} for {user_tier} user: ${best_price:.2f}')
     
+    print("\nTesting Additional Scenarios:")
+
+    # Test 1: Regular customer
+    regular_price = engine.calculate_best_price(product, 'Regular')
+    print(f"Regular customer price: ${regular_price:.2f}")
+
+    # Test 2: Different product price
+    expensive_product = Product('Laptop', 100.0)
+    laptop_price = engine.calculate_best_price(expensive_product, 'Premium')
+    print(f"Premium laptop price: ${laptop_price:.2f}")
+
+    # Test 3: Discount that should not apply
+    high_discount = PercentageDiscount(80)
+    test_engine = DiscountEngine([high_discount])
+    no_discount_price = test_engine.calculate_best_price(product, 'Regular')
+    print(f"Price when discount does not apply: ${no_discount_price:.2f}")
